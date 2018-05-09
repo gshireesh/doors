@@ -8,13 +8,14 @@ import {Component, Input, OnInit} from '@angular/core';
 export class DoorsComponent implements OnInit {
 
   @Input() opened: boolean;
+  @Input() delay = 500;
 
   constructor() { }
 
   ngOnInit() {
     setTimeout(() => {
       this.opened = true;
-    }, 1000);
+    }, this.delay);
   }
 
 }
